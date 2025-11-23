@@ -1,13 +1,13 @@
 from search import search_prompt
 
 def main():
-    chain = search_prompt()
-
-    if not chain:
-        print("Não foi possível iniciar o chat. Verifique os erros de inicialização.")
-        return
+    print("Faça uma pergunta:\n\n")
     
-    pass
+    question = input("PERGUNTA: ")
+    
+    response = search_prompt(question=question)
+
+    print(f"RESPOSTA: {response}")
 
 if __name__ == "__main__":
     main()
