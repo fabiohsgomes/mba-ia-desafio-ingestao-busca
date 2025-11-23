@@ -1,14 +1,14 @@
 PHONY: init
 init:
-	@python -m venv venv
+	python -m venv venv
 
-PHONY: activate
-activate:
-	@source venv/bin/activate
+PHONY: active
+active:
+	source venv/bin/activate
 
 PHONY: install
 install:
-	@python -m pip install -r requirements.txt
+	pip install -r requirements.txt
 
 PHONY: up
 up:
