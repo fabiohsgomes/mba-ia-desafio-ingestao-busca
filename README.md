@@ -12,19 +12,21 @@ Após clonar o projeto, execute os seguintes passos na raíz do projeto:
     source venv/bin/activate
     ```
 
-3. Instalar as dependências do projeto:
+3. Instalar as dependências do projeto:*
     ```bash
     pip install -r requirements.txt
     ```
 
 ## Executando o projeto
 
+Este projeto está usando os modelos da Google Gemmini para a realização do embadding e como modelo de LLM, portanto para rodar o projeto é necessário configurar o arquivo .env na raiz do projeto. Renomeie o arquivo .env.example para .env. No arquivo informe na variável de ambiente **GOOGLE_API_KEY** a sua chave de acesso. Depois execute os passos abaixo para executar o projeto.
+
 1. Subindo container do banco de dados Postgree + Vector para a ingestão do documento:
     ```bash
     docker compose up -d
     ```
 
-2. Realizando a ingestão do documento "documento.pdf", localizado na raiz do projeto:
+2. Realizando a ingestão do documento "document.pdf", localizado na raiz do projeto:
     ```bash
     python src/ingest.py
 
